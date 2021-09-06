@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ludo Game</title>
+    <link href="styles.css" rel="stylesheet">
+
+    <script src="code.js"></script>
+</head>
+
+<body>
+
+<div class="playerTurn">
+    <input type="text" id="player" name="numberInput" value="" readonly>
+
+</div>
+
+<div class="fieldDiv">
+    <input type="text" class="Inpfield" id="field" value=" " size="62" readonly>
+</div>
+
+<div class="buttonDiv">
+    <input type="button" class="myButton" id="buttonID" value="Roll Dice" onclick="generateRandom()" disabled>
+</div>
+
+<div class="nextTurnDiv">
+    <input type="button" class="nextbtn" id="nextBtnID" value="Next Turn" onclick="selectPlayer()" disabled>
+</div>
+
+<div class="startDiv">
+    <input type="button" class="start" id="startID" value="Start !!" onclick="resetStat() ">
+</div>
+
+<div class="resetBtnDiv">
+    <input type="button" class="reset"  value="RESTART GAME!!" onclick="refresh()">
+</div>
+
+<div class="myTable">
+    <table border="1" class="tableStyle">
+        <tr >
+            <td class="blockOne; BlueBlock">
+                <div class="completeBox">
+                    <div class="FirstRowOfGoti" >
+                        <div class="tempfirstGiti " id="blueOneParent">
+                            <img src="bluePiece.png" alt="" class=" bluePlayer killimageCenter" id="one" onclick="Bluemove('blueOneParent','one')">
+                        </div>
+
+                        <div class="tempSecondGiti" id="blueTwoParent">
+                            <img src="bluePiece.png" alt="" class="killimageCenter bluePlayer" id="two" onclick="Bluemove('blueTwoParent','two')">
+                        </div>
+                    </div>
+
+                    <div class="secondRowOfGoti">
+
+                        <div class="tempthirdGiti" id="blueThreeParent">
+                            <img src="bluePiece.png" alt="" class="killimageCenter bluePlayer" id="three" onclick="Bluemove('blueThreeParent','three')">
+                        </div>
+                        <div class="tempforthGiti" id="blueFourParent">
+                            <img src="bluePiece.png" alt="" class="killimageCenter bluePlayer" id="four" onclick="Bluemove('blueFourParent','four')">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </td>
+            <td  class="blockTwo">
+                <div>
+                    <table width="100%">
+                        <tr>
+                            <td class="singleBox" id="10"></td>
+                            <td class="singleBox" id="11"></td>
+                            <td class="singleBox" id="12"></td>
+                        </tr>
+                        <tr>
+                            <td class="singleBox" id="9"></td>
+                            <td class="singleBox ReddestinationLine" id="63"></td>
+                            <td class="singleBox ReddestinationLine" id="13"></td>
+                        </tr>
+                        <tr>
+                            <td class="singleBox" id="8"></td>
+                            <td class="singleBox ReddestinationLine" id="64"></td>
+                            <td class="singleBox" id="14"></td>
+                        </tr>
+                        <tr>
+                            <td class="singleBox" id="7"></td>
+                            <td class="singleBox ReddestinationLine" id="65"></td>
+                            <td class="singleBox" id="15"></td>
+                        </tr>
+                        <tr>
+                            <td class="singleBox" id="6"></td>
+                            <td class="singleBox ReddestinationLine" id="66"></td>
+                            <td class="singleBox" id="16"></td>
+                        </tr>
+                        <tr>
+                            <td class="singleBox" id="5"></td>
+                            <td class="singleBox ReddestinationLine" id="67"></td>
+                            <td class="singleBox " id="17"></td>
+                        </tr>
+
+                    </table>
+                </div>
+            </td>
+
+            <td  class="blockThree; redBlock">
+                <div class="completeBoxTwo">
+
+                    <div class="FirstRowOfGoti">
+                        <div class="tempfirstGiti" id="FirstRedParent">
+                            <img src="redPiece.png" alt="" class=" redPlayer killimageCenter" id="rOne" onclick="RedMove('FirstRedParent','rOne')">
+                        </div>
+
+                        <div class="tempSecondGiti" id="SecondRedParent">
+                            <img src="redPiece.png" alt="" class="redPlayer killimageCenter" id="rTwo" onclick="RedMove('SecondRedParent','rTwo')">
+                        </div>
+                    </div>
+
+                    <div class="secondRowOfGoti">
+
+                        <div class="tempthirdGiti" id="ThirdRedParent">
+                            <img src="redPiece.png" alt=""  class=" redPlayer killimageCenter" id="rThree" onclick="RedMove('ThirdRedParent','rThree')">
+                        </div>
+                        <div class="tempforthGiti" id="ForthRedParent">
+                            <img src="redPiece.png" alt="" class=" redPlayer killimageCenter" id="rFour" onclick="RedMove('ForthRedParent','rFour')">
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </td>
+        </tr>
+
+
+
+        <tr>
+            <td class="blockFour">
+                <div>
+                    <table width="100%">
+                        <tr>
+                            <td class="singleBoxSecond" id="51"></td>
+                            <td class="singleBoxSecond BluedestinationLine" id="0"></td>
+                            <td class="singleBoxSecond" id="1"></td>
+                            <td class="singleBoxSecond" id="2"></td>
+                            <td class="singleBoxSecond" id="3"></td>
+                            <td class="singleBoxSecond" id="4"></td>
+                        </tr>
+                        <tr>
+                            <td class="singleBoxSecond" id="50"></td>
+                            <td class="singleBoxSecond BluedestinationLine" id="52"></td>
+                            <td class="singleBoxSecond BluedestinationLine" id="53"></td>
+                            <td class="singleBoxSecond BluedestinationLine" id="54"></td>
+                            <td class="singleBoxSecond BluedestinationLine" id="55"></td>
+                            <td class="singleBoxSecond BluedestinationLine" id="56"></td>
+                        </tr>
+                        <tr>
+                            <td class="singleBoxSecond" id="49"></td>
+                            <td class="singleBoxSecond" id="48"></td>
+                            <td class="singleBoxSecond" id="47"></td>
+                            <td class="singleBoxSecond" id="46"></td>
+                            <td class="singleBoxSecond" id="45"></td>
+                            <td class="singleBoxSecond" id="44"></td>
+                        </tr>
+
+                    </table>
+                </div>
+            </td>
+
+            <td class="blockFive">
+                <div class="imageDiv">
+                    <img src="king.png" alt="" class="centerPhoto">
+                </div>
+
+            </td>
+
+            <td class="blockSix">
+                <div>
+                    <table width="100%">
+                        <tr>
+                            <td class="singleBoxSecond" id="18"></td>
+                            <td class="singleBoxSecond" id="19"></td>
+                            <td class="singleBoxSecond" id="20"></td>
+                            <td class="singleBoxSecond" id="21"></td>
+                            <td class="singleBoxSecond" id="22"></td>
+                            <td class="singleBoxSecond" id="23"></td>
+                        </tr>
+                        <tr>
+                            <td class="singleBoxSecond; smallGreenBox" id="78"></td>
+                            <td class="singleBoxSecond; smallGreenBox " id="77"></td>
+                            <td class="singleBoxSecond; smallGreenBox" id="76"></td>
+                            <td class="singleBoxSecond; smallGreenBox" id="75"></td>
+                            <td class="singleBoxSecond; smallGreenBox" id="74"></td>
+                            <td class="singleBoxSecond" id="24"></td>
+                        </tr>
+                        <tr>
+                            <td class="singleBoxSecond" id="30"></td>
+                            <td class="singleBoxSecond" id="29"></td>
+                            <td class="singleBoxSecond" id="28"></td>
+                            <td class="singleBoxSecond" id="27"></td>
+                            <td class="singleBoxSecond; smallGreenBox" id="26"></td>
+                            <td class="singleBoxSecond" id="25"></td>
+                        </tr>
+
+                    </table>
+                </div>
+
+            </td>
+        </tr>
+
+
+        <tr>
+            <td class="blockSeven; yellowBlock">
+
+                <div class="completeBox">
+                    <div class="FirstRowOfGoti">
+                        <div class="tempfirstGiti" id="FirstYellowParent">
+                            <img src="yellowPiece.png" alt="" class=" yellowPlayer killimageCenter" id="Yone" onclick="YellowMove('FirstYellowParent','Yone')">
+                        </div>
+
+                        <div class="tempSecondGiti" id="SecondYellowParent">
+                            <img src="yellowPiece.png" alt="" class="yellowPlayer killimageCenter" id="Ytwo" onclick="YellowMove('SecondYellowParent','Ytwo')">
+                        </div>
+                    </div>
+
+                    <div class="secondRowOfGoti">
+
+                        <div class="tempthirdGiti" id="ThirdYellowParent">
+                            <img src="yellowPiece.png" alt="" class="yellowPlayer killimageCenter" id="Ythree" onclick="YellowMove('ThirdYellowParent','Ythree')">
+                        </div>
+                        <div class="tempforthGiti" id="ForthYellowParent">
+                            <img src="yellowPiece.png" alt="" class="yellowPlayer killimageCenter" id="Yfour" onclick="YellowMove('ForthYellowParent','Yfour')">
+                        </div>
+
+                    </div>
+                </div>
+
+            </td>
+            <td class="blockEight">
+                <div>
+                    <table width="100%">
+                        <tr>
+                            <td class="singleBox" id="43"></td>
+                            <td class="singleBox; smallYellowBox" id="89"></td>
+                            <td class="singleBox" id="31"></td>
+                        </tr>
+                        <tr>
+                            <td class="singleBox" id="42"></td>
+                            <td class="singleBox; smallYellowBox" id="88"></td>
+                            <td class="singleBox" id="32"></td>
+                        </tr>
+                        <tr>
+                            <td class="singleBox" id="41"></td>
+                            <td class="singleBox; smallYellowBox"  id="87"></td>
+                            <td class="singleBox" id="33"></td>
+                        </tr>
+                        <tr>
+                            <td class="singleBox" id="40"></td>
+                            <td class="singleBox; smallYellowBox" id="86"></td>
+                            <td class="singleBox" id="34"></td>
+                        </tr>
+                        <tr>
+                            <td class="singleBox; smallYellowBox" id="39" ></td>
+                            <td class="singleBox; smallYellowBox"  id="85"></td>
+                            <td class="singleBox" id="35"></td>
+                        </tr>
+                        <tr>
+                            <td class="singleBox" id="38"></td>
+                            <td class="singleBox" id="37"></td>
+                            <td class="singleBox" id="36"></td>
+                        </tr>
+
+                    </table>
+                </div>
+            </td>
+            <td class="blockNine; greenBlock">
+                <div class="completeBoxTwo">
+
+                    <div class="FirstRowOfGoti">
+                        <div class="tempfirstGiti" id="FirstGreenParent">
+                            <img src="greenPiece.png" alt="" class="killimageCenter greenPlayer" id="gone" onclick="GreenMove('FirstGreenParent','gone')">
+                        </div>
+
+                        <div class="tempSecondGiti" id="SecondGreenParent">
+                            <img src="greenPiece.png" alt="" class="killimageCenter greenPlayer" id="gtwo" onclick="GreenMove('SecondGreenParent','gtwo')">
+                        </div>
+                    </div>
+
+                    <div class="secondRowOfGoti">
+
+                        <div class="tempthirdGiti" id="ThirdGreenParent">
+                            <img src="greenPiece.png" alt="" class="killimageCenter greenPlayer" id="gthree" onclick="GreenMove('ThirdGreenParent','gthree')">
+                        </div>
+                        <div class="tempforthGiti" id="ForthGreenParent">
+                            <img src="greenPiece.png" alt="" class="killimageCenter greenPlayer" id="gfour" onclick="GreenMove('ForthGreenParent','gfour')">
+                        </div>
+
+                    </div>
+
+                </div>
+            </td>
+        </tr>
+
+    </table>
+</div>
+
+<div class="bluePassedDiv">
+    <table border="0" class="bluePassed">
+        <tr>
+            <td class="passadBox; blueBoxes" id="57"></td>
+            <td class="passadBox; blueBoxes" id="58"></td>
+            <td class="passadBox; blueBoxes" id="59"></td>
+        </tr>
+        <tr>
+            <td class="passadBox; blueBoxes" id="60"></td>
+            <td class="passadBox; blueBoxes" id="61"></td>
+            <td class="passadBox; blueBoxes" id="62"></td>
+        </tr>
+    </table>
+
+    <table border="0" class="redPassad">
+        <tr>
+            <td class="passadBox; redBoxes" id="68"></td>
+            <td class="passadBox; redBoxes" id="69"></td>
+            <td class="passadBox; redBoxes" id="70"></td>
+        </tr>
+        <tr>
+            <td class="passadBox; redBoxes" id="71"></td>
+            <td class="passadBox; redBoxes" id="72"></td>
+            <td class="passadBox; redBoxes" id="73"></td>
+        </tr>
+    </table>
+
+    <table border="0" class="greenPassad">
+        <tr>
+            <td class="passadBox; greenBoxes" id="79"></td>
+            <td class="passadBox; greenBoxes" id="80"></td>
+            <td class="passadBox; greenBoxes" id="81"></td>
+        </tr>
+        <tr>
+            <td class="passadBox; greenBoxes" id="82"></td>
+            <td class="passadBox; greenBoxes " id="83"></td>
+            <td class="passadBox; greenBoxes" id="84"></td>
+        </tr>
+    </table>
+
+    <table border="0" class="yellowPassad">
+        <tr>
+            <td class="passadBox; yellowBoxes" id="90"></td>
+            <td class="passadBox; yellowBoxes" id="91"></td>
+            <td class="passadBox; yellowBoxes" id="92"></td>
+        </tr>
+        <tr>
+            <td class="passadBox; yellowBoxes" id="93"></td>
+            <td class="passadBox; yellowBoxes" id="94"></td>
+            <td class="passadBox; yellowBoxes" id="95"></td>
+        </tr>
+    </table>
+
+
+
+</div>
+
+
+
+
+
+
+</body>
+</html>

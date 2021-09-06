@@ -1,0 +1,393 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: mediumorchid;
+}
+
+.myTable{
+    display: inline-block;
+    top: 0;
+}
+
+.buttonDiv{
+    display: block;
+    position: absolute;
+    margin-top: 9.5%;
+    margin-left: 3%;
+}
+
+.myButton {
+    box-shadow: 4px 1px 0 1px #1564ad;
+    background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+    background-color:#79bbff;
+    border-radius:27px;
+    border:2px solid #337bc4;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family: Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:17px 46px;
+    text-decoration:none;
+    text-shadow:0 1px 0 #528ecc;
+}
+.myButton:hover {
+    background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+    background-color:#378de5;
+}
+.myButton:active {
+    position:relative;
+    top:1px;
+}
+
+.playerTurn{
+    position: absolute;
+    display: block;
+    margin-left: 1.4%;
+
+    margin-top: 21%;
+}
+#player{
+    width: 220px;
+    height: 100px;
+    text-align: center;
+    font-size: 29px;
+    font-family: Algerian;
+    background-color: silver;
+    color: black;
+    border: 2px solid red;
+}
+.nextTurnDiv{
+    display: block;
+    position: absolute;
+    margin-top: 15%;
+    margin-left: 3%;
+}
+
+
+.startDiv{
+    display: block;
+    position: absolute;
+    margin-top: 32%;
+    margin-left: 4%;
+}
+.resetBtnDiv{
+    display: block;
+    position: absolute;
+    margin-top: 43%;
+    margin-left: 2.6%;
+}
+.reset{
+    width: 170px;
+    height: 60px;
+    text-align: center;
+    font-weight: bold ;
+    background-color: red;
+    font-size: large;
+}
+.start{
+    width: 130px;
+    height: 130px;
+    font-size: 25px;
+    text-align: center;
+    font-family: Algerian;
+    font-weight: bold ;
+    border-radius: 50%;
+    color: red;
+    background-color: orange;
+    border: 2px solid darkgreen;
+}
+
+.start:hover{
+    width: 140px;
+    height: 140px;
+    font-size: 29px;
+    border-radius: 50%;
+    color: white;
+    background-color: orange;
+    border: 3px solid black;
+
+
+}
+
+.nextbtn{
+    box-shadow: 4px 1px 0 1px #1564ad;
+    background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+    background-color:#79bbff;
+    border-radius:27px;
+    border:2px solid #337bc4;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    text-decoration:none;
+    text-shadow:0 1px 0 #528ecc;
+    padding:17px 46px;
+}
+.nextbtn:hover {
+    background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+    background-color:#378de5;
+}
+.nextbtn:active {
+    position:relative;
+    top:1px;
+}
+
+
+.tableStyle{
+    width: 60%;
+    height: 65%;
+    background-color: black;
+    margin: auto;
+}
+
+.blockOne{
+    width: 4%;
+    border: 1px solid black;
+    height: 150px;;
+}
+.blockTwo{
+    height: 150px;
+    width: 1%;
+    border: 1px solid black;
+}
+.blockThree{
+    width: 4%;
+    border: 1px solid black;
+    height: 150px;
+}
+.blockFour{
+    width: 4%;
+    border: 1px solid black;
+    height: 132px;
+}
+.blockFive{
+    width: 1%;
+    border: 1px solid black;
+    height: 132px;
+    background-color: deeppink;
+}
+.blockSix{
+    width: 4%;
+    border: 1px solid black;
+    height: 132px;
+}
+.blockSeven{
+    width: 4%;
+    border: 1px solid black;
+    height: 160px;
+}
+.blockEight{
+    width: 1%;
+    border: 1px solid black;
+    height: 160px;
+}
+.blockNine{
+    width: 4%;
+    border: 1px solid black;
+    height: 160px;
+}
+
+.BlueBlock{
+    background-color: blue;
+}
+.redBlock{
+    background-color: rgb(240,0,10);
+}
+.yellowBlock{
+    background-color: yellow;
+}
+.greenBlock{
+    background-color: green;
+}
+
+.smallRedBox{
+    background-color: rgb(240,0,10);
+}
+.smallBlueBox{
+    background-color: pink;
+}
+.smallYellowBox{
+    background-color: #efcc00;
+}
+.smallGreenBox{
+    background-color: #3CB371;
+}
+
+.singleBox{
+    border: 1px solid black;
+    height: 37px;
+    width: 16.6666%;
+    background-color: aliceblue;
+}
+.singleBoxSecond{
+    border: 1px solid black;
+    height: 40px;
+    width: 16.666666%;
+    background-color: aliceblue;
+}
+
+.imageDiv{
+    position: relative;
+}
+.centerPhoto{
+    width: 120px;
+    height: 100px;
+    margin-left: 22%;
+}
+
+.fieldDiv{
+    position: absolute;
+    display: inline-block;
+    margin-left: 4%;
+    margin-top: 1%;
+    width: 100px;
+}
+.Inpfield{
+    border: 3px solid black;
+
+}
+#field{
+    background-color: gold;
+    width: 150px;
+    height: 90px;
+    text-align: center;
+    font-size: 70px;
+    font-family: Algerian;
+    color: red;
+}
+
+.completeBox{
+    margin: auto;
+    width: 64%;
+    height: 64%;
+    border: 2px solid black;
+    color: rgba(0,0,255,40);
+    background-color: gainsboro;
+    border-radius: 20%;
+}
+.completeBoxTwo{
+    margin: auto;
+    width: 65%;
+    height: 65%;
+    border: 2px solid black;
+    color: rgba(0,0,255,40);
+    background-color: gainsboro;
+    border-radius: 20%;
+}
+
+.bluePlayer{
+    width: 20px;
+    height: 20px;
+
+}
+
+.yellowPlayer{
+    width: 20px;
+    height: 20px
+}
+.redPlayer{
+    width: 20px;
+    height: 20px
+}
+.greenPlayer{
+    width: 20px;
+    height: 20px
+}
+
+.FirstRowOfGoti{
+    width: 100%;
+    height: 50%;
+}
+.secondRowOfGoti{
+    display: block;
+    width: 100%;
+    height: 50%;
+}
+.tempfirstGiti{
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+}
+.tempSecondGiti{
+    position: absolute;
+    display: inline-block;
+    width: 6%;
+    height: 10%;
+}
+
+.tempthirdGiti{
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+}
+.tempforthGiti{
+    position: absolute;
+    display: inline-block;
+    width: 6%;
+    height: 10%;
+}
+.killimageCenter{
+    margin-left: 32%;
+    margin-top: 32%;
+}
+
+
+.ReddestinationLine{
+    background-color:#E80000 ;
+}
+.BluedestinationLine{
+    background-color:#3333FF;
+}
+
+.bluePassedDiv{
+    display: inline-block;
+    position: absolute;
+    z-index: -100;
+    right: 40px;
+    top: 30px;
+}
+.bluePassed{
+    width: 140px;
+    height: 140px;
+}
+
+.redPassad{
+    width: 140px;
+    height: 140px;
+}
+.greenPassad{
+    width: 140px;
+    height: 140px;
+}
+.yellowPassad{
+    width: 140px;
+    height: 140px;
+}
+
+.passadBox{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    height: 37px;
+    width: 16.6666%;
+
+}
+.blueBoxes{
+    background-color:#3333FF;
+}
+.redBoxes{
+      background-color:#E80000 ;
+
+}
+.greenBoxes{
+    background-color: #3CB371;
+}
+.yellowBoxes{
+    background-color: #efcc00;
+}
